@@ -1,0 +1,70 @@
+/* Set up border box box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Custom Properties */
+
+:root {
+  /* Font Family */
+  --ff-primary: 'Arimo', sans-serif;
+  /* Colors */
+  --clr-gold: #a19a15;
+  --clr-navy: #151aa1;
+  --clr-gray: #8384a3;
+  --clr-white: whitesmoke;
+}
+
+body {
+  background-color: var(--clr-white);
+  margin: 0;
+  font-family: var(--ff-primary);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.quote {
+  border: 2px solid black;
+  padding: 2em;
+  display: grid;
+  grid-template-areas: 
+    "img img"
+    "author author"
+    "text text"
+    "btn--left btn--right"
+    "btn--surprise btn--surprise";
+  justify-items: center;
+}
+
+.quote__img {
+  grid-area: img;
+  height: 250px;
+}
+
+.quote__author {
+  grid-area: author;
+}
+
+.quote__text {
+  grid-area: text;
+}
+
+.btn--left {
+  grid-area: btn--left;
+}
+
+.btn--right {
+  grid-area: btn--right;
+}
+
+.btn--surprise {
+  grid-area: btn--surprise;
+}
